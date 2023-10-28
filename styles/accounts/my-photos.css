@@ -165,8 +165,8 @@
     }
 
     .account-albums__container {
-        flex-wrap: nowrap;
-        flex-direction: row;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
 
         min-height: 10vh;
 

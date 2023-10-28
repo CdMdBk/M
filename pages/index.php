@@ -43,6 +43,8 @@
     <link rel="icon"
           href="../images/favicon.svg">
 
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+
     <title>
         M
     </title>

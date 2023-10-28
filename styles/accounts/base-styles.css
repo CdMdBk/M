@@ -1,6 +1,6 @@
 .account {
     min-height: 100vh;
-    max-height: 200vh;
+    /*max-height: 200vh;*/
     background: url('../../images/accounts/bg.png') no-repeat center / cover;
 }
 

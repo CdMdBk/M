@@ -31,6 +31,8 @@
     <link rel="stylesheet"
           href="../styles/accounts/editing-account.css">
 
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+
     <title>
         PA
     </title>
@@ -297,118 +299,6 @@
                         </p>
                     </div>
                 </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -451,182 +341,181 @@
         <div class="data data_bg">
             <div class="data__child-block">
                 <img class="data_image"
-                     src="../images/accounts/eva/avatar.png"
+                     src="../images/accounts/eva/image.png"
                      alt="avatar">
             </div>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                      Имя
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change>
                     Ева
                 </li>
             </ul>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                     Фамилия
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change>
                     Григорьевна
                 </li>
             </ul>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                     Почта
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change>
                     gr.ev23@mail.ru
                 </li>
             </ul>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                     Телефон
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change>
                     +79092932749
                 </li>
             </ul>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                     Никнейм
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change>
                     @Grgreva
                 </li>
             </ul>
 
             <ul class="data__child-block">
-                <li class="data__li">
+                <li class="data__li data__li_font">
                     Краткая информация
                 </li>
 
-                <li class="data__li"
+                <li class="data__li data__li_font"
                     data-change data-textarea>
                     Создаю искусство своим телом) Люблю необычные фотографии и меня вдохнавляет природа
                 </li>
             </ul>
         </div>
 
-<!--        <form class="data data_bg"-->
-<!--              method="POST"-->
-<!--              action="#">-->
-<!--            <fieldset class="data__child-block">-->
-<!--                <input class="data_input-image"-->
-<!--                       type="image"-->
-<!--                       id="image"-->
-<!--                       name="image">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="name">-->
-<!--                    Имя-->
-<!--                </label>-->
-<!---->
-<!--                <input class="data__input"-->
-<!--                       type="text"-->
-<!--                       id="name"-->
-<!--                       name="name"-->
-<!--                       value="Введите имя"-->
-<!--                       autocomplete="given-name">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="last-name">-->
-<!--                    Фамилия-->
-<!--                </label>-->
-<!---->
-<!--                <input class="data__input"-->
-<!--                       type="text"-->
-<!--                       id="last-name"-->
-<!--                       name="last-name"-->
-<!--                       value="Введите фамилию"-->
-<!--                       autocomplete="additional-name">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="email">-->
-<!--                    Почта-->
-<!--                </label>-->
-<!---->
-<!--                <input class="data__input"-->
-<!--                       type="email"-->
-<!--                       id="email"-->
-<!--                       name="email"-->
-<!--                       value="Введите почту"-->
-<!--                       autocomplete="email">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="telephone">-->
-<!--                    Телефон-->
-<!--                </label>-->
-<!---->
-<!--                <input class="data__input"-->
-<!--                       type="tel"-->
-<!--                       id="telephone"-->
-<!--                       name="telephone"-->
-<!--                       value="Введите телефон"-->
-<!--                       autocomplete="tel">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="nick-name">-->
-<!--                    Никнейм-->
-<!--                </label>-->
-<!---->
-<!--                <input class="data__input"-->
-<!--                       type="text"-->
-<!--                       id="nick-name"-->
-<!--                       name="nick-name"-->
-<!--                       value="Введите ник"-->
-<!--                       autocomplete="nickname">-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__child-block">-->
-<!--                <label class="data__li"-->
-<!--                       for="info">-->
-<!--                    Краткая информация-->
-<!--                </label>-->
-<!---->
-<!--                <textarea class="data__textarea"-->
-<!--                          type="text"-->
-<!--                          id="info"-->
-<!--                          name="info"-->
-<!--                          autocomplete="nickname"-->
-<!--                          cols="30"-->
-<!--                          rows="10">-->
-<!--                    Введите краткую информацию-->
-<!--                </textarea>-->
-<!--            </fieldset>-->
-<!---->
-<!--            <fieldset class="data__button">-->
-<!--                <input class="data__button_appearance"-->
-<!--                       type="submit"-->
-<!--                       id="submit"-->
-<!--                       name="submit"-->
-<!--                       value="Сохранить">-->
-<!--            </fieldset>-->
-<!--        </form>-->
+        <form class="data data_bg"
+              method="POST"
+              action="#">
+            <fieldset class="data__child-block">
+                <input class="data_input-image"
+                       type="file"
+                       id="image"
+                       name="image"
+                       value="Измените фото">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="name">
+                    Имя
+                </label>
+
+                <input class="data__input"
+                       type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Введите имя"
+                       autocomplete="given-name">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="last-name">
+                    Фамилия
+                </label>
+
+                <input class="data__input"
+                       type="text"
+                       id="last-name"
+                       name="last-name"
+                       placeholder="Введите фамилию"
+                       autocomplete="additional-name">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="email">
+                    Почта
+                </label>
+
+                <input class="data__input"
+                       type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Введите почту"
+                       autocomplete="email">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="telephone">
+                    Телефон
+                </label>
+
+                <input class="data__input"
+                       type="tel"
+                       id="telephone"
+                       name="telephone"
+                       placeholder="Введите телефон"
+                       autocomplete="tel">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="nick-name">
+                    Никнейм
+                </label>
+
+                <input class="data__input"
+                       type="text"
+                       id="nick-name"
+                       name="nick-name"
+                       placeholder="Введите ник"
+                       autocomplete="nickname">
+            </fieldset>
+
+            <fieldset class="data__child-block">
+                <label class="data__li data__li_font"
+                       for="info">
+                    Краткая информация
+                </label>
+
+                <textarea class="data__input"
+                          type="text"
+                          id="info"
+                          name="info"
+                          autocomplete="nickname"
+                          rows="10"
+                          placeholder="Введите информацию о себе"></textarea>
+            </fieldset>
+
+            <fieldset class="data__button">
+                <input class="data__button_appearance"
+                       type="submit"
+                       id="submit"
+                       name="submit"
+                       value="Сохранить">
+            </fieldset>
+        </form>
     </main>
 
     <script src="../scripts/preloader.js"></script>
