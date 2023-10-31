@@ -30,6 +30,8 @@
           href="../styles/accounts/my-photos.css">
     <link rel="stylesheet"
           href="../styles/accounts/editing-account.css">
+    <link rel="icon"
+          href="../images/favicon.svg">
 
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 

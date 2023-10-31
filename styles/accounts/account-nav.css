@@ -16,6 +16,10 @@
     background: url('../../images/accounts/nav/bg-nav.png') no-repeat center / cover;
 }
 
+.account-nav[data-admin-nav] {
+    padding-top: 40px;
+}
+
 .account-nav_font {
     color: #fff;
     text-align: start;
@@ -91,6 +95,10 @@
         padding: 20px;
     }
 
+    .account-nav[data-admin-nav] {
+        padding: 20px;
+    }
+
     .account-nav__content {
         display: flex;
         justify-content: center;
@@ -101,7 +109,6 @@
     }
 
     .account-nav__content[data-nav-box-avatar] {
-        /*justify-content: space-between;*/
         justify-content: center;
         align-items: center;
 
