@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $id = $_SESSION['id_user'];
+    session_abort();
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -36,7 +42,7 @@
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 
     <title>
-        PA
+        <?=$id?>
     </title>
 </head>
 <body class="account">

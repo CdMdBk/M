@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $id = $_SESSION['id_user'];
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -46,7 +51,7 @@
     <script src="../scripts/jquery-3.7.1.min.js"></script>
 
     <title>
-        M
+        <?=$id?>
     </title>
 </head>
 <body>
@@ -70,9 +75,7 @@
         </div>
     </div>
 
-    <form class="validation"
-          method="POST"
-          action="../php/registration.php">
+    <form class="validation validation__registration">
         <fieldset class="validation__container validation__container_bg">
             <legend class="validation__header validation__header_font">
                 Почувствуй момент вместе с нами!
@@ -135,6 +138,39 @@
                         id="switch-form"
                         type="button">
                     У вас уже есть учётная запись?
+                </button>
+            </fieldset>
+        </fieldset>
+    </form>
+
+    <form class="validation validation__authorization">
+        <fieldset class="validation__container validation__container_bg">
+            <legend class="validation__header validation__header_font">
+                Почувствуй момент вместе с нами!
+            </legend>
+
+            <fieldset id="form-container"
+                      class="validation__registration">
+                <fieldset class="validation__input-box">
+                    <label class="validation__input-box_font" for="emailUser">
+                        Почта
+                    </label>
+
+                    <input class="validation__input" id="emailUser" name="emailUser" type="email" placeholder="Введите почту" required>
+                </fieldset>
+
+                <fieldset class="validation__input-box">
+                    <label class="validation__input-box_font" for="passwordUser">
+                        Пароль
+                    </label>
+
+                    <input class="validation__input" id="passwordUser" name="passwordUser" type="password" placeholder="Введите пароль" required>
+                </fieldset>
+
+                <input class="validation__button validation__button_bg" type="submit" value="Войти" required>
+
+                <button onclick="switchForm()" class="validation__button-switch validation__button-switch_font" id="switch-form" type="button">
+                    Ещё нет аккаунта? Зарегистрируйтесь
                 </button>
             </fieldset>
         </fieldset>
@@ -957,8 +993,6 @@
 
     </main>
 
-
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -970,5 +1004,7 @@
     <script src="../scripts/landing_page/show-portfolio-images.js"></script>
     <script src="../scripts/landing_page/registration-field.js"></script>
     <script src="../scripts/landing_page/slider.js"></script>
+    <script src="../../backend/ajax/registration.js"></script>
+    <script src="../../backend/ajax/authorization.js"></script>
 </body>
 </html>
