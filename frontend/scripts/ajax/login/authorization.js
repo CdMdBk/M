@@ -18,7 +18,7 @@ formAuthorization.addEventListener('submit', event => {
         return response.json();
     }).then(data => {
         if (data['error']) {
-            console.log('Error!')
+            alert('Неправильно введена почта или пароль')
         } else {
             if (data['admin']) {
                 window.location.href = 'admin.php';

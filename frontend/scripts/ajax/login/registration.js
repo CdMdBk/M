@@ -19,7 +19,7 @@ formRegistration.addEventListener('submit', event => {
         return response.json();
     }).then(data => {
         if (data['error']) {
-            console.log('Error!');
+            alert('Пользователь с таким именем или почтой уже существует');
         } else {
             arrUserData = data;
             window.location.href = 'personal-account.php';

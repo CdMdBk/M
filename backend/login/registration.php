@@ -37,8 +37,8 @@ $array_response['id'] = $id_user['id'];
 $_SESSION['id_user'] = $id_user['id'];
 $_SESSION['name_user'] = $name;
 $_SESSION['email_user'] = $email;
-//$_SESSION['telephone_user'] = '';
-//$_SESSION['nickname_user'] = '';
-//$_SESSION['brief_information_user'] = '';
+$_SESSION['telephone_user'] = '';
+$_SESSION['nickname_user'] = '';
+$_SESSION['brief_information_user'] = '';
 
 echo json_encode($array_response);

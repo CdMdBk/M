@@ -16,6 +16,6 @@ formEditData.addEventListener('submit', event => {
     }).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
+        editDataUser(data);
     });
-})
+});

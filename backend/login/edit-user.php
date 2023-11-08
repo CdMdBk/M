@@ -16,8 +16,7 @@ $array_response = array(
     'email' => $email,
     'telephone' => $telephone,
     'nickname' => $nickname,
-    '$brief_information' => $brief_information,
-
+    'brief_information' => $brief_information,
 );
 
 $update_data = "UPDATE `users` SET name = '$name', email = '$email', telephone = '$telephone', nickname = '$nickname', brief_information = '$brief_information' WHERE name = '$name_user'";

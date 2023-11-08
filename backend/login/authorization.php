@@ -11,7 +11,7 @@ $array_response = array(
     'password' => $password
 );
 
-$select_data = "SELECT id, name, email, password FROM `users`";
+$select_data = "SELECT * FROM `users`";
 $array_data = $connect->query($select_data);
 
 $coincidence = '';
@@ -21,6 +21,9 @@ if ($array_data->num_rows > 0) {
             $coincidence = $row['id'];
             $_SESSION['name_user'] = $row['name'];
             $_SESSION['email_user'] = $row['email'];
+            $_SESSION['telephone_user'] = $row['telephone'];
+            $_SESSION['nickname_user'] = $row['nickname'];
+            $_SESSION['brief_information_user'] = $row['brief_information'];
 
             $array_response['id'] = $row['id'];
             $_SESSION['id_user'] = $row['id'];
@@ -41,9 +44,5 @@ if (empty($coincidence)) {
     session_abort();
     exit();
 }
-
-//$_SESSION['telephone_user'] = '';
-//$_SESSION['nickname_user'] = '';
-//$_SESSION['brief_information_user'] = '';
 
 echo json_encode($array_response);

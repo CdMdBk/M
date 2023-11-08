@@ -666,18 +666,6 @@
                                             value>
                                         Выберите город
                                     </option>
-
-<!--                                    <option value="6">-->
-<!--                                        Студийная съёмка-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="underwater_photography">-->
-<!--                                        Подводная съёмка-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="field_shooting">-->
-<!--                                        Выездная съёмка-->
-<!--                                    </option>-->
                                 </select>
 
                                 <img class="appointment__input-box_arrow"
@@ -694,30 +682,6 @@
                                             value>
                                         Выберите стиль
                                     </option>
-
-<!--                                    <option value="minimum">-->
-<!--                                        Package "Minimum"-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="standard">-->
-<!--                                        Package "Standard"-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="vip">-->
-<!--                                        Package "Vip"-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="duo">-->
-<!--                                        Package "Duo"-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="portfolio">-->
-<!--                                        Package "Portfolio"-->
-<!--                                    </option>-->
-<!---->
-<!--                                    <option value="underwater">-->
-<!--                                        Package "Underwater"-->
-<!--                                    </option>-->
                                 </select>
 
                                 <img class="appointment__input-box_arrow"
@@ -744,8 +708,7 @@
                                       id="comment"
                                       cols="30"
                                       rows="10"
-                                      placeholder="Комментарий"
-                                      required></textarea>
+                                      placeholder="Комментарий"></textarea>
                         </fieldset>
                     </fieldset>
 

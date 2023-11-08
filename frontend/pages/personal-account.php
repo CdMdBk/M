@@ -143,7 +143,7 @@
                      src="../images/accounts/user.svg"
                      alt="avatar">
 
-                <p class="account-nav_font account-nav_active-status">
+                <p class="account-nav_font account-nav_active-status" data-name>
                     <?=$name_user?>
                 </p>
             </button>
