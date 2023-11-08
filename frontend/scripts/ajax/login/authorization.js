@@ -8,7 +8,7 @@ formAuthorization.addEventListener('submit', event => {
         password: formDataAuthorization.get('passwordUser')
     };
 
-    fetch('../../backend/server/authorization.php', {
+    fetch('../../backend/login/authorization.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -17,7 +17,15 @@ formAuthorization.addEventListener('submit', event => {
     }).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
-        window.location.href = 'personal-account.php';
+        if (data['error']) {
+            console.log('Error!')
+        } else {
+            if (data['admin']) {
+                window.location.href = 'admin.php';
+            } else {
+                arrUserData = data;
+                window.location.href = 'personal-account.php';
+            }
+        }
     });
 });

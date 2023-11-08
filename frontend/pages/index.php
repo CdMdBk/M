@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $id = $_SESSION['id_user'];
+    $id_user= $_SESSION['id_user'];
 ?>
 
 <!doctype html>
@@ -48,10 +48,10 @@
     <link rel="icon"
           href="../images/favicon.svg">
 
-    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/common/jquery-3.7.1.min.js"></script>
 
     <title>
-        <?=$id?>
+        M
     </title>
 </head>
 <body>
@@ -211,12 +211,14 @@
                         </a>
                     </li>
 
-                    <li class="nav__li">
-                        <a class="nav__ul_font"
-                           href="#appointment">
-                            Запись
-                        </a>
-                    </li>
+                    <?php if (!empty($id_user)) { ?>
+                        <li class="nav__li">
+                            <a class="nav__ul_font"
+                               href="#appointment">
+                                Запись
+                            </a>
+                        </li>
+                    <?php } ?>
 
                     <li class="nav__li">
                         <a class="nav__ul_font"
@@ -225,19 +227,21 @@
                         </a>
                     </li>
 
-<!--                    <li class="nav__li"-->
-<!--                        data-show-validation>-->
-<!--                        <p class="nav__ul_font">-->
-<!--                            Вход-->
-<!--                        </p>-->
-<!--                    </li>-->
-
-                    <li class="nav__li">
-                        <a class="nav__ul_font nav__ul_font-link"
-                           href="personal-account.php">
-                            ЛК
-                        </a>
-                    </li>
+                    <?php if (empty($id_user)) { ?>
+                        <li class="nav__li"
+                            data-show-validation>
+                            <p class="nav__ul_font">
+                                Вход
+                            </p>
+                        </li>
+                    <?php } else {?>
+                        <li class="nav__li">
+                            <a class="nav__ul_font nav__ul_font-link"
+                               href="personal-account.php">
+                                ЛК
+                            </a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </nav>
             
@@ -256,6 +260,7 @@
                     Fashion-фотограф
                 </p>
 
+                <?php if (empty($id_user)) { ?>
                 <button class="header-content__button"
                         type="button"
                         data-show-validation>
@@ -264,6 +269,7 @@
                         Записаться
                     </a>
                 </button>
+                <?php } ?>
             </div>
         </div>
     </header>
@@ -460,10 +466,12 @@
                             Стилист-гример: нет
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -486,10 +494,12 @@
                             Стилист-гример: да
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -512,10 +522,12 @@
                             Стилист-гример: да
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -538,10 +550,12 @@
                             Стилист-гример: да
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -564,10 +578,12 @@
                             Стилист-гример: да
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -590,16 +606,19 @@
                             Стилист-гример: да
                         </p>
 
-                        <button class="price__button price__button_font"
-                                data-show-validation>
-                            Записаться
-                        </button>
+                        <?php if (empty($id_user)) { ?>
+                            <button class="price__button price__button_font"
+                                    data-show-validation>
+                                Записаться
+                            </button>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="appointment appointment_bg"
+        <?php if (!empty($id_user)) { ?>
+            <section class="appointment appointment_bg"
                  data-aos="fade-up">
             <div class="container">
                 <h2 id="appointment"
@@ -607,21 +626,12 @@
                     Запись
                 </h2>
 
-                <form action="../php/registration.php"
-                      method="post"
-                      class="appointment__flex-box">
+                <form class="appointment__flex-box">
                     <fieldset class="appointment__inputs-box">
                         <fieldset>
-                            <input class="appointment__input appointment__input_bg"
-                                   id="name"
-                                   name="name"
-                                   type="text"
-                                   placeholder="Имя"
-                                   required>
-
                             <fieldset class="appointment__input-box">
                                 <select class="appointment__input appointment__input_bg"
-                                        name="sity"
+                                        name="cities"
                                         required>
                                     <option disabled
                                             selected
@@ -629,44 +639,16 @@
                                         Город
                                     </option>
 
-                                    <option value="Moscow">
+                                    <option value="1">
                                         Москва
                                     </option>
 
-                                    <option value="Petersburg">
-                                        Петербург
+                                    <option value="2">
+                                        Санкт-Петербург
                                     </option>
 
-                                    <option value="Rostov">
-                                        Ростов
-                                    </option>
-                                </select>
-
-                                <img class="appointment__input-box_arrow"
-                                     src="../images/landing_page/appointment/arrow.svg"
-                                     alt="arrow">
-                            </fieldset>
-
-                            <fieldset class="appointment__input-box">
-                                <select class="appointment__input appointment__input_bg"
-                                        name="style"
-                                        required>
-                                    <option disabled
-                                            selected
-                                            value>
-                                        Стиль
-                                    </option>
-
-                                    <option value="studio_shooting">
-                                        Студийная съёмка
-                                    </option>
-
-                                    <option value="underwater_photography">
-                                        Подводная съёмка
-                                    </option>
-
-                                    <option value="field_shooting">
-                                        Выездная съёмка
+                                    <option value="3">
+                                        Элиста
                                     </option>
                                 </select>
 
@@ -677,37 +659,65 @@
 
                             <fieldset class="appointment__input-box">
                                 <select class="appointment__input appointment__input_bg"
-                                        name="service"
+                                        name="styles"
                                         required>
                                     <option disabled
                                             selected
                                             value>
-                                        Услуга
+                                        Выберите город
                                     </option>
 
-                                    <option value="minimum">
-                                        Package "Minimum"
+<!--                                    <option value="6">-->
+<!--                                        Студийная съёмка-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="underwater_photography">-->
+<!--                                        Подводная съёмка-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="field_shooting">-->
+<!--                                        Выездная съёмка-->
+<!--                                    </option>-->
+                                </select>
+
+                                <img class="appointment__input-box_arrow"
+                                     src="../images/landing_page/appointment/arrow.svg"
+                                     alt="arrow">
+                            </fieldset>
+
+                            <fieldset class="appointment__input-box">
+                                <select class="appointment__input appointment__input_bg"
+                                        name="services"
+                                        required>
+                                    <option disabled
+                                            selected
+                                            value>
+                                        Выберите стиль
                                     </option>
 
-                                    <option value="standard">
-                                        Package "Standard"
-                                    </option>
-
-                                    <option value="vip">
-                                        Package "Vip"
-                                    </option>
-
-                                    <option value="duo">
-                                        Package "Duo"
-                                    </option>
-
-                                    <option value="portfolio">
-                                        Package "Portfolio"
-                                    </option>
-
-                                    <option value="underwater">
-                                        Package "Underwater"
-                                    </option>
+<!--                                    <option value="minimum">-->
+<!--                                        Package "Minimum"-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="standard">-->
+<!--                                        Package "Standard"-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="vip">-->
+<!--                                        Package "Vip"-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="duo">-->
+<!--                                        Package "Duo"-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="portfolio">-->
+<!--                                        Package "Portfolio"-->
+<!--                                    </option>-->
+<!---->
+<!--                                    <option value="underwater">-->
+<!--                                        Package "Underwater"-->
+<!--                                    </option>-->
                                 </select>
 
                                 <img class="appointment__input-box_arrow"
@@ -740,14 +750,14 @@
                     </fieldset>
 
                     <fieldset class="appointment__inputs-box">
-                        <button class="appointment__button appointment__button_style"
-                                data-show-validation>
+                        <button class="appointment__button appointment__button_style">
                             Записаться
                         </button>
                     </fieldset>
                 </form>
             </div>
         </section>
+        <?php } ?>
 
         <section class="feedback feedback_bg"
                  data-aos="fade-up">
@@ -968,12 +978,14 @@
                                 </a>
                             </li>
 
+                            <?php if (!empty($id_user)) { ?>
                             <li class="footer__li">
                                 <a class="footer__li_font"
                                    href="#appointment">
                                     Запись
                                 </a>
                             </li>
+                            <?php } ?>
 
                             <li class="footer__li">
                                 <a class="footer__li_font"
@@ -990,21 +1002,24 @@
                     </div>
             </footer>
         </section>
-
     </main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="../scripts/preloader.js"></script>
+    <script src="../scripts/common/preloader.js"></script>
     <script src="../scripts/landing_page/validation.js"></script>
     <script src="../scripts/landing_page/change-nav-font.js"></script>
     <script src="../scripts/landing_page/burger.js"></script>
     <script src="../scripts/landing_page/show-portfolio-images.js"></script>
     <script src="../scripts/landing_page/registration-field.js"></script>
     <script src="../scripts/landing_page/slider.js"></script>
-    <script src="../../backend/ajax/registration.js"></script>
-    <script src="../../backend/ajax/authorization.js"></script>
+
+    <script src="../scripts/ajax/all-variables.js"></script>
+    <script src="../scripts/ajax/login/registration.js"></script>
+    <script src="../scripts/ajax/login/authorization.js"></script>
+    <script src="../scripts/ajax/recording/linked-lists.js"></script>
+    <script src="../scripts/ajax/recording/record.js"></script>
 </body>
 </html>

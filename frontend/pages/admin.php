@@ -35,7 +35,7 @@
     <link rel="icon"
           href="../images/favicon.svg">
 
-    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/common/jquery-3.7.1.min.js"></script>
 
     <title>
         Admin
@@ -142,7 +142,8 @@
                      src="../images/admin/exit.svg"
                      alt="Записи">
 
-                <p class="account-nav_font account-nav_active-status">
+                <p class="account-nav_font account-nav_active-status"
+                   data-exit>
                     Выход
                 </p>
             </a>
@@ -547,8 +548,11 @@
         </section>
     </main>
 
-    <script src="../scripts/preloader.js"></script>
+    <script src="../scripts/common/preloader.js"></script>
     <script src="../scripts/accounts/filter-orders.js"></script>
     <script src="../scripts/accounts/change-status.js"></script>
+
+    <script src="../scripts/ajax/all-variables.js"></script>
+    <script src="../scripts/ajax/login/exit-user.js"></script>
 </body>
 </html>

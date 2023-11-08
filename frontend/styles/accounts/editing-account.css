@@ -101,6 +101,11 @@
     margin-bottom: 40px;
 }
 
+form > .data__child-block {
+    display: flex;
+    flex-direction: column;
+}
+
 .data__child-block:first-child {
     width: 100%;
 }

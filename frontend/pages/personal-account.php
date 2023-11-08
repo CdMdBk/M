@@ -1,7 +1,15 @@
 <?php
     session_start();
-    $id = $_SESSION['id_user'];
-    session_abort();
+    $id_user = $_SESSION['id_user'];
+    $name_user = $_SESSION['name_user'];
+    $email_user = $_SESSION['email_user'];
+    $telephone_user = $_SESSION['telephone_user'];
+    $nickname_user = $_SESSION['nickname_user'];
+    $brief_information_user = $_SESSION['brief_information_user'];
+
+    if (empty($id_user)) {
+        exit();
+    }
 ?>
 
 <!doctype html>
@@ -39,10 +47,10 @@
     <link rel="icon"
           href="../images/favicon.svg">
 
-    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/common/jquery-3.7.1.min.js"></script>
 
     <title>
-        <?=$id?>
+        <?=$name_user?>
     </title>
 </head>
 <body class="account">
@@ -114,18 +122,12 @@
                     </a>
                 </li>
 
-                <!--                    <li class="nav__li"-->
-                <!--                        data-show-validation>-->
-                <!--                        <p class="nav__ul_font">-->
-                <!--                            Вход-->
-                <!--                        </p>-->
-                <!--                    </li>-->
-
                 <li class="nav__li">
-                    <a class="nav__ul_font nav__ul_font-link"
-                       href="index.php">
+                    <button class="nav__ul_font nav__ul_font-link"
+                            type="button"
+                            data-exit>
                         Выход
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -142,7 +144,7 @@
                      alt="avatar">
 
                 <p class="account-nav_font account-nav_active-status">
-                    Ева Григорьевна
+                    <?=$name_user?>
                 </p>
             </button>
 
@@ -328,7 +330,7 @@
                      src="../images/accounts/eva/avatar.png"
                      alt="avatar">
                 <h1 class="profile__header_heading">
-                    Ева Григорьевна<br>
+                    <?=$name_user?><br>
                     <span>
                         Подробнее
                     </span>
@@ -360,18 +362,7 @@
 
                 <li class="data__li data__li_font"
                     data-change>
-                    Ева
-                </li>
-            </ul>
-
-            <ul class="data__child-block">
-                <li class="data__li data__li_font">
-                    Фамилия
-                </li>
-
-                <li class="data__li data__li_font"
-                    data-change>
-                    Григорьевна
+                    <?=$name_user?>
                 </li>
             </ul>
 
@@ -382,7 +373,7 @@
 
                 <li class="data__li data__li_font"
                     data-change>
-                    gr.ev23@mail.ru
+                    <?=$email_user?>
                 </li>
             </ul>
 
@@ -393,7 +384,7 @@
 
                 <li class="data__li data__li_font"
                     data-change>
-                    +79092932749
+                    <?=$telephone_user?>
                 </li>
             </ul>
 
@@ -404,7 +395,7 @@
 
                 <li class="data__li data__li_font"
                     data-change>
-                    @Grgreva
+                    <?=$nickname_user?>
                 </li>
             </ul>
 
@@ -415,14 +406,12 @@
 
                 <li class="data__li data__li_font"
                     data-change data-textarea>
-                    Создаю искусство своим телом) Люблю необычные фотографии и меня вдохнавляет природа
+                    <?=$brief_information_user?>
                 </li>
             </ul>
         </div>
 
-        <form class="data data_bg"
-              method="POST"
-              action="#">
+        <form class="data data_bg">
             <fieldset class="data__child-block">
                 <input class="data_input-image"
                        type="file"
@@ -441,22 +430,9 @@
                        type="text"
                        id="name"
                        name="name"
+                       value="<?=$name_user?>"
                        placeholder="Введите имя"
                        autocomplete="given-name">
-            </fieldset>
-
-            <fieldset class="data__child-block">
-                <label class="data__li data__li_font"
-                       for="last-name">
-                    Фамилия
-                </label>
-
-                <input class="data__input"
-                       type="text"
-                       id="last-name"
-                       name="last-name"
-                       placeholder="Введите фамилию"
-                       autocomplete="additional-name">
             </fieldset>
 
             <fieldset class="data__child-block">
@@ -469,6 +445,7 @@
                        type="email"
                        id="email"
                        name="email"
+                       value="<?=$email_user?>"
                        placeholder="Введите почту"
                        autocomplete="email">
             </fieldset>
@@ -483,20 +460,22 @@
                        type="tel"
                        id="telephone"
                        name="telephone"
+                       value="<?=$telephone_user?>"
                        placeholder="Введите телефон"
                        autocomplete="tel">
             </fieldset>
 
             <fieldset class="data__child-block">
                 <label class="data__li data__li_font"
-                       for="nick-name">
+                       for="nickname">
                     Никнейм
                 </label>
 
                 <input class="data__input"
                        type="text"
-                       id="nick-name"
-                       name="nick-name"
+                       id="nickname"
+                       name="nickname"
+                       value="<?=$nickname_user?>"
                        placeholder="Введите ник"
                        autocomplete="nickname">
             </fieldset>
@@ -510,10 +489,10 @@
                 <textarea class="data__input"
                           type="text"
                           id="info"
-                          name="info"
+                          name="brief_information"
                           autocomplete="nickname"
                           rows="10"
-                          placeholder="Введите информацию о себе"></textarea>
+                          placeholder="Введите информацию о себе"><?=$brief_information_user?></textarea>
             </fieldset>
 
             <fieldset class="data__button">
@@ -526,8 +505,12 @@
         </form>
     </main>
 
-    <script src="../scripts/preloader.js"></script>
+    <script src="../scripts/common/preloader.js"></script>
     <script src="../scripts/landing_page/burger.js"></script>
     <script src="../scripts/accounts/user-work.js"></script>
+
+    <script src="../scripts/ajax/all-variables.js"></script>
+    <script src="../scripts/ajax/login/exit-user.js"></script>
+    <script src="../scripts/ajax/login/edit-user.js"></script>
 </body>
 </html>

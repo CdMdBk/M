@@ -9,7 +9,7 @@ formRegistration.addEventListener('submit', event => {
         password: formDataRegistration.get('passwordUser')
     };
 
-    fetch('../../backend/server/registration.php', {
+    fetch('../../backend/login/registration.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -18,7 +18,11 @@ formRegistration.addEventListener('submit', event => {
     }).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data);
-        window.location.href = 'personal-account.php';
+        if (data['error']) {
+            console.log('Error!');
+        } else {
+            arrUserData = data;
+            window.location.href = 'personal-account.php';
+        }
     });
 });

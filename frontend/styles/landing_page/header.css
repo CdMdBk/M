@@ -124,6 +124,7 @@
 
 .nav__ul_font-link {
     color: var(--color-gray);
+    background-color: initial;
 }
 
 .nav__ul_font_active {
