@@ -216,99 +216,99 @@
 
         <section class="account-photos">
             <h3 class="account-photos__heading account-photos__heading_font">
-                Фотосессия 21.04.23
+<!--                Фотосессия 21.04.23-->
             </h3>
 
             <div class="account-photos__flex-box">
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/1.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/1.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/2.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/2.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/3.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/3.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/4.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/4.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/5.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/5.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/6.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/6.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/7.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/7.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/8.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/8.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
 
-                <div class="account-photos__photo">
-                    <img class="account-photos_image"
-                         src="../images/accounts/eva/9.png"
-                         alt="photo">
-                </div>
+<!--                <div class="account-photos__photo">-->
+<!--                    <img class="account-photos_image"-->
+<!--                         src="../images/accounts/eva/9.png"-->
+<!--                         alt="photo">-->
+<!--                </div>-->
             </div>
         </section>
 
         <section class="account-albums">
             <div class="account-albums__container">
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-1.png"
-                         alt="photo">
+<!--                <div class="account-albums__item">-->
+<!--                    <img class="account-albums__photo"-->
+<!--                         src="../images/accounts/eva/main-1.png"-->
+<!--                         alt="photo">-->
+<!---->
+<!--                    <div class="account-albums__text-box">-->
+<!--                        <p class="account-albums_text">-->
+<!--                            Исходники-->
+<!--                        </p>-->
+<!---->
+<!--                        <p class="account-albums_text">-->
+<!--                            9 фото-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Исходники
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
-
-                <div class="account-albums__item">
-                    <img class="account-albums__photo"
-                         src="../images/accounts/eva/main-2.png"
-                         alt="photo">
-
-                    <div class="account-albums__text-box">
-                        <p class="account-albums_text">
-                            Обработанные
-                        </p>
-
-                        <p class="account-albums_text">
-                            9 фото
-                        </p>
-                    </div>
-                </div>
+<!--                <div class="account-albums__item">-->
+<!--                    <img class="account-albums__photo"-->
+<!--                         src="../images/accounts/eva/main-2.png"-->
+<!--                         alt="photo">-->
+<!---->
+<!--                    <div class="account-albums__text-box">-->
+<!--                        <p class="account-albums_text">-->
+<!--                            Обработанные-->
+<!--                        </p>-->
+<!---->
+<!--                        <p class="account-albums_text">-->
+<!--                            9 фото-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </section>
 

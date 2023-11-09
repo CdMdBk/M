@@ -40,8 +40,6 @@ formRecord.addEventListener('submit', event => {
         },
         body: JSON.stringify(arrRecordData)
     }).then(response => {
-        return response.json();
-    }).then(data => {
-        console.log(data);
+        alert('Запись оформлена');
     });
 });

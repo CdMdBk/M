@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 08, 2023 at 10:26 PM
+-- Generation Time: Nov 09, 2023 at 11:42 AM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -62,11 +62,14 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`id`, `id_user`, `status`, `client`, `style`, `date`, `amount`) VALUES
-(1, 6, 0, 'kolia@gmail.com', 'Подводная съёмка', '2023-11-29 22:27:00', 9000),
-(2, 8, 0, 'kevin@gmail.com', 'Подводная съёмка', '2023-11-30 18:00:00', 15000),
-(3, 9, 0, 'nina@mail.ru', 'Подводная съёмка', '2023-12-31 23:50:00', 15000),
-(4, 7, 0, 'logo@mail.ru', 'Студийная съёмка', '2023-11-16 12:43:00', 9000),
-(5, 8, 0, 'cavin@gmail.com', 'Студийная съёмка', '2023-11-24 14:00:00', 9000);
+(1, 6, 1, 'kolia@gmail.com', 'Подводная съёмка', '2023-11-29 22:27:00', 9000),
+(2, 8, 1, 'kevin@gmail.com', 'Подводная съёмка', '2023-11-30 18:00:00', 15000),
+(3, 9, 1, 'nina@mail.ru', 'Подводная съёмка', '2023-12-31 23:50:00', 15000),
+(4, 7, 1, 'logo@mail.ru', 'Студийная съёмка', '2023-11-16 12:43:00', 9000),
+(5, 8, 1, 'kevin@gmail.com', 'Студийная съёмка', '2023-11-24 14:00:00', 9000),
+(6, 10, 1, 'val@mail.ru', 'Студийная съёмка', '2023-11-24 00:00:00', 20000),
+(7, 10, 0, 'val@mail.ru', 'Выездная съёмка', '2023-11-22 17:00:00', 50000),
+(8, 11, 1, 'antoxa@gmail.com', 'Подводная съёмка', '2023-12-07 21:00:00', 9000);
 
 -- --------------------------------------------------------
 
@@ -146,9 +149,11 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `telephone`, `nickname`,
 (4, 'admin', 'djeimss.holl@gmail.com', '2121', NULL, NULL, NULL),
 (5, 'Милана', 'milana@mail.ru', '1111', '86541238984', 'milanca', 'Я люблю отдыхать'),
 (6, 'Николай', 'kolia@gmail.com', '3490', '84569871236', 'versus', 'Ну я просто весельчак'),
-(7, 'Настя', 'logo@mail.ru', '1903', NULL, NULL, NULL),
-(8, 'Кевин', 'cavin@gmail.com', '2345', '84762158945', 'CAVIN', 'Меня зовут Кевин! Я люблю есть'),
-(9, 'Нина', 'nina@mail.ru', '12345678', '89364581220', 'NINAN', 'За мной гонятся великие мастера мира');
+(7, 'Настя', 'logo@mail.ru', '1903', '84569871200', 'logozin', 'Уляля'),
+(8, 'Кевин', 'kevin@gmail.com', '2345', '84762158945', 'CAVIN', 'Меня зовут Кевин! Я люблю есть'),
+(9, 'Нина', 'nina@mail.ru', '12345678', '89364581220', 'NINAN', 'За мной гонятся великие мастера мира'),
+(10, 'Валера', 'val@mail.ru', 'fn29-asf', '87456258799', '', ''),
+(11, 'Антон', 'antoxa@gmail.com', 'jfbb3928fbiu', '', 'aNtoXXX', 'Я геймер, люблю играть');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +203,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -216,7 +221,7 @@ ALTER TABLE `styles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

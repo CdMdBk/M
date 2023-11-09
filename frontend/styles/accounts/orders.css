@@ -72,6 +72,10 @@ select.orders-data__cell_font {
     padding: 14px 30px;
 }
 
+.orders-data__button:nth-child(2) {
+    display: none;
+}
+
 .orders-data__button_appearance {
     border-radius: 20px;
     color: #fff;

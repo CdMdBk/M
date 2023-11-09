@@ -2,9 +2,7 @@ fetch('../../backend/admin/list-records.php')
     .then(response => {
     return response.json();
 }).then(data => {
-    console.log(data);
-
-    recordContainer.innerHTML = record;
+    recordContainer.innerHTML = recordHeader;
     for (let iterator = 0; iterator < data.length; iterator++) {
         record = `
             <div class="orders-data__order">
@@ -18,11 +16,11 @@ fetch('../../backend/admin/list-records.php')
                 
                 <select class="orders-data__cell orders-data__cell_font orders-data__cell_delete"
                         id="">
-                    <option value="">
+                    <option value="${data[iterator]['status']}">
                         ${data[iterator]['status']}
                     </option>
                     
-                    <option value="">
+                    <option value="${data[iterator]['other_status']}">
                         ${data[iterator]['other_status']}
                     </option>
                 </select>
@@ -46,4 +44,5 @@ fetch('../../backend/admin/list-records.php')
         `;
         recordContainer.innerHTML += record;
     }
+    document.querySelector('.admin-panel__count-recording_font').innerHTML = `Найдено: ${data.length}`;
 });

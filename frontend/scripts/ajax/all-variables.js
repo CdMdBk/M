@@ -9,7 +9,7 @@ const formRecord = document.querySelector('.appointment__flex-box');
 const formEditData = document.querySelector('form.data');
 
 const recordContainer = document.querySelector('.orders-data');
-let record = `
+let recordHeader = `
     <div class="orders-data__order">
         <h5 class="orders-data__cell orders-data__cell_font">
             ID
@@ -36,7 +36,18 @@ let record = `
         </h5>
     </div>
 `;
-const buttonChangeStatus = document.querySelector('.orders-data__button[data-change]');
+let record = '';
+let arrRecords = {};
+
+const buttonFilterRecords = document.querySelector('.admin-panel__button:nth-child(2)');
+const idFilter = document.querySelector('.admin-panel__input[id="id"]');
+const clientFilter = document.querySelector('.admin-panel__input[id="customer"]');
+const styleFilter = document.querySelector('.admin-panel__input[id="style"]');
+const dateFilter = document.querySelector('.admin-panel__input[id="date"]');
+const arrFilterData = {};
+
+const buttonReport = document.querySelector('.admin-panel__button:nth-child(1)');
+let arrRecordsReport = {};
 
 function exitUser() {
     fetch('../../backend/login/exit-user.php')

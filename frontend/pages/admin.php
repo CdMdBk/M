@@ -156,9 +156,7 @@
                         Записи
                     </h5>
 
-                    <p class="admin-panel__count-recording_font">
-                        Найдено: 16
-                    </p>
+                    <p class="admin-panel__count-recording_font"></p>
                 </div>
 
                 <div class="admin-panel__input-container">
@@ -195,21 +193,20 @@
                         <select class="admin-panel__input"
                                 name="style"
                                 id="style">
-                            <option value=""
-                                    disabled>
+                            <option value="">
                                 Все
                             </option>
 
-                            <option value="studio">
-                                Студийная съемка
+                            <option value="Студийная съёмка">
+                                Студийная съёмка
                             </option>
 
-                            <option value="water">
-                                Подводная съемка
+                            <option value="Подводная съёмка">
+                                Подводная съёмка
                             </option>
 
-                            <option value="field-shooting">
-                                Выездная съемка
+                            <option value="Выездная съёмка">
+                                Выездная съёмка
                             </option>
                         </select>
 
@@ -267,5 +264,8 @@
     <script src="../scripts/ajax/login/exit-user.js"></script>
     <script src="../scripts/ajax/admin/list-records.js"></script>
     <script src="../scripts/ajax/admin/filter-orders.js"></script>
+    <script src="../scripts/ajax/admin/change-status.js"></script>
+    <script src="../scripts/ajax/admin/list-filtered-records.js"></script>
+    <script src="../scripts/ajax/admin/report.js"></script>
 </body>
 </html>
